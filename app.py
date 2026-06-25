@@ -11,7 +11,7 @@ def listar_unidades():
         rc = RemoteCKAN('https://dados.recife.pe.gov.br:443/', apikey=None)
         result = rc.action.datastore_search(
             resource_id="c901459f-f6c7-44dc-bdd5-dd4081e58e69",
-            limit=None,
+            limit=5,
             q="",
         )
         return jsonify(result['records'])
